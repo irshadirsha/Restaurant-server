@@ -8,7 +8,7 @@ router.get("/",(req,res)=>{
 })
 router.get('/home',userController.Home)
 router.post('/addData',userController.Adddata)
-router.put('/updateData',userController.UpdateData)
-router.delete('/deleteData',userController.DeleteData)
+router.post('/updateData',userController.UpdateData)
+router.delete('/deleteData/:id',userController.DeleteData)
 
 module.exports=router

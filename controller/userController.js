@@ -25,7 +25,7 @@ const Home = async (req, res, next) => {
               res.status(500).send("Error querying data");
             } else {
               res.status(200).json({ message: "working", data: results });
-              console.log(results);
+            //   console.log(results);
             }
           });
        
@@ -83,8 +83,9 @@ const Adddata = async (req, res) => {
 };
 
 const UpdateData = async(req,res)=>{
-    const { id, hotelname, address, phone, image, } = req.body;
-  
+    console.log("reacheddd");
+    const { id, hotelname, address, phone, image, } = req.body.info;
+  console.log(id, hotelname, address, phone, image,);
     const updateQuery = `
       UPDATE Restaurent_Table
       SET hotelname= ?,
@@ -108,7 +109,7 @@ const UpdateData = async(req,res)=>{
 }
 
 const DeleteData=async(req,res)=>{
-    const  id  = req.query.id;
+    const  id  = req.params.id;
   
     const deleteQuery = `
       DELETE FROM Restaurent_Table
