@@ -95,6 +95,7 @@ const UpdateData = async(req,res)=>{
       WHERE id = ?
     `;
   
+    
     const values = [hotelname, address, phone, image,id ];
   
     connections.query(updateQuery, values, (err, results) => {
