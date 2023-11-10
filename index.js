@@ -11,7 +11,7 @@ console.log(process.env.BASEURL);
 const frontendport=process.env.BASEURL
 app.use(
     cors({
-        origin: frontendport, // Replace with the correct origin
+        origin: frontendport, 
         methods: ['GET', 'POST','DELETE','PUT'],
         credentials: true,
     })

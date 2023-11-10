@@ -137,19 +137,3 @@ module.exports = { Home, Adddata ,UpdateData,DeleteData};
 
 
   
-// const Adddata=async(req,res)=>{
-//     try {
-//         const {info}=req.body
-//         console.log(info);
-//         console.log(info.image);
-      
-
-//         res.json({data:info})
-
-//     } catch (error) {
-//         res.status(503).json({message:"internal server error"})
-//     }
-// }
-
-
-// module.exports={Home,Adddata}
