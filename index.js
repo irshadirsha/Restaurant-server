@@ -9,6 +9,7 @@ app.use(express.json());
 const PORT=process.env.PORT
 console.log(process.env.BASEURL);
 const frontendport=process.env.BASEURL
+console.log(frontendport ,'ff');
 app.use(
     cors({
         origin: frontendport, 
