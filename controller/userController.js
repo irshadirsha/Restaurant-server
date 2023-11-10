@@ -2,11 +2,11 @@
 const mysql = require ('mysql2')
 require('dotenv').config();
 const connections = mysql.createConnection({
-    // host:"127.0.0.1",
     host:process.env.host,
     user:process.env.user,
     password:process.env.password,
-    database:process.env.database
+    database:process.env.database,
+    port: 22345,
 })
 connections.connect((err)=>{
     if(err){
@@ -38,6 +38,7 @@ const Home = async (req, res, next) => {
 const Adddata = async (req, res) => {
     try {
         const { info } = req.body;
+        console.log(info,'aaaaa');
 
         const createTableQuery = `
             CREATE TABLE IF NOT EXISTS Restaurent_Table (
